@@ -43,12 +43,26 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
       <h2 className="title"> Which film information are you looking for ?</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="formClass">
       <input type="text" value={filmName} onChange={handleChange} />
       <button type="submit">Submit</button>
       </form>
+
+      <p>Map of Paris</p>
+      <MapContainer center={centreParis} zoom={12} scrollWheelZoom={false}>
+      <TileLayer  
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>      
+      {data?.records?.map((film,index) => (
+            <Marker eventHandlers={{click : _ => clickEvent(film)}} key={index} position={[film.fields.geo_point_2d[0], film.fields.geo_point_2d[1]]}>
+                <Popup>
+                    <p>{film.fields.nom_tournage}</p>
+                    <p>{film.fields.adresse_lieu}</p>
+                </Popup>
+            </Marker>
+      ))}
+      </MapContainer>
 
       {showInfo && (      
             <div>     
@@ -60,19 +74,7 @@ function App() {
                 <p>Date début : {film.fields.date_debut}</p>          
               </div>
             ))}
-            <p>Map of Paris</p>
-        <MapContainer center={centreParis} zoom={12} scrollWheelZoom={false}>
-        <TileLayer  
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>      
-       {data.records.map((film,index) => (
-            <Marker eventHandlers={{click : _ => clickEvent(film)}} key={index} position={[film.fields.geo_point_2d[0], film.fields.geo_point_2d[1]]}>
-                <Popup>
-                    <p>{film.fields.nom_tournage}</p>
-                    <p>{film.fields.adresse_lieu}</p>
-                </Popup>
-            </Marker>
-        ))}
-        </MapContainer>
+            
           </div>     
          )}
     </div>

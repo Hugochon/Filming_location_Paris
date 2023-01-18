@@ -1,13 +1,13 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  
+#root{
+  width: 100%;
+  height: 100%;
 }
 
 body {
+  
   background-color: #282c34;
+  margin : 0;
+  padding : 0;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -31,4 +31,30 @@ body {
 }
 .title{
   text-decoration: underline;
+}
+.container{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.formClass{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width : 1vw;
+  gap : 1rem;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.formClass input{
+  border-radius: 5px;
+  flex-grow: 1;
+}
+.formClass button{
+  flex-grow: 1;
 }
