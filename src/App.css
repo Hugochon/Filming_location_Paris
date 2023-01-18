@@ -29,6 +29,14 @@ body {
   
   border-radius: 10px;
 }
+.filmBlock:hover{
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #404857;
+  box-shadow: 0 0 10px 0 #282c34;
+  transition: 0.5s;
+  
+}
 .title{
   text-decoration: underline;
 }
@@ -58,3 +66,5 @@ body {
 .formClass button{
   flex-grow: 1;
 }
+
+

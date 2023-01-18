@@ -71,7 +71,8 @@ function App() {
                 <h2>{film.fields.nom_tournage} :</h2>
                 <p>Réalisateur : {film.fields.nom_realisateur}</p>
                 <p>Address : {film.fields.adresse_lieu}</p>
-                <p>Date début : {film.fields.date_debut}</p>          
+                <p>Date début : {film.fields.date_debut}</p>   
+                <p>Date fin : {film.fields.date_fin}</p>        
               </div>
             ))}
             
