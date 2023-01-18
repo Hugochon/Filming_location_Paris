@@ -1,4 +1,4 @@
-# Quick project around the films recorded in Paris
+# Quick React project around the films recorded in Paris using an API.
 
 This project is part of my Advanced Web Development course. 
 
