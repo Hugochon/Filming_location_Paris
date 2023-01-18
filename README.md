@@ -6,5 +6,5 @@ The goal of this work was to use the API of Paris Data (https://opendata.paris.f
 
 You can access the site from this link : https://tournage-film-paris.vercel.app/
 
-
+As examples if you don't have any film ideas to look at, you can try to look at CIGARE AU MIEL, EMILY IN PARIS or NOTRE DAME.
 
