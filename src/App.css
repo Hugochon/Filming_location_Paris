@@ -1,0 +1,34 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+}
+
+body {
+  background-color: #282c34;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.leaflet-container {
+  height: 500px;
+  width: 500px;
+}
+
+.surligne {
+  background: linear-gradient(to bottom right, #77A1D3, #79CBCA, #E684AE, #FF8A9A);
+}
+.filmBlock{
+  padding : 1rem;
+  
+  border-radius: 10px;
+}
+.title{
+  text-decoration: underline;
+}
