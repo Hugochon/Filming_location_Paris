@@ -44,10 +44,10 @@ function App() {
 
   return (
     <div className='container'>
-      <h2 className="title"> Which film information are you looking for ?</h2>
+      <h2 className="title"> Enter the name of the film you want the filming locations</h2>
       <form onSubmit={handleSubmit} className="formClass">
       <input type="text" value={filmName} onChange={handleChange} />
-      <button type="submit">Submit</button>
+      <button type="submit">Search</button>
       </form>
 
       <p>Map of Paris</p>
@@ -66,6 +66,7 @@ function App() {
 
       {showInfo && (      
             <div>     
+            <p>You can click on a pin to highlight its informations in the list below</p>
             {data.records.map((film, index) => (
               <div className={`filmBlock ${film.clicked ? "surligne" : ""}`} key={index}>
                 <h2>{film.fields.nom_tournage} :</h2>
